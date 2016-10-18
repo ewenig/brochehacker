@@ -5,11 +5,10 @@
  */
 
 #include "TimerOne.h"
-#include "broche_eeprom.h"
-#include "broche_display.h"
-#include "broche_glider.h"
-#include "broche_tetris.h"
-#include "broche_text.h"
+#include "brochehacker.h"
+
+// set up global animation store
+AnimationStorage *store = (AnimationStorage *) malloc(sizeof(AnimationStorage));
 
 void setup() {
   loadEEPROM();

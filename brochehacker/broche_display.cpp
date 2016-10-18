@@ -2,7 +2,7 @@
  * Code taken and adapted from BlushingBoy.net
  */
 
-#include "broche_display.h"
+#include "brochehacker.h"
 
 byte state = ST_GLIDER;
 byte screen[8] = {0, 0, 0, 0, 0, 0, 0, 0};

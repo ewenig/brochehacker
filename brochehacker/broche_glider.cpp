@@ -1,21 +1,23 @@
-#include "broche_glider.h"
+#include "brochehacker.h"
 
 // glider is the animation code for the badge
 // named for its original animation code which presented a game of life glider
 
 // hacker anim loop
 void runGlider() {
+  extern AnimationStorage *store;
+  
   static byte animFrame = 0;
   static byte cycleCount = 0;
   
   cycleCount++;
-  if(cycleCount >= store.anim1Speed) {
+  if(cycleCount >= store->anim1Speed) {
     cycleCount = 0;
     animFrame++;
-    if(animFrame >= store.anim1Frames) animFrame = 0;
+    if(animFrame >= store->anim1Frames) animFrame = 0;
     // drawFrame(&anim[animFrame*8]);
     for(byte i = 0; i < 8; i++)
-      screen[i] = store.anim1Data[animFrame*8+i];
+      screen[i] = store->anim1Data[animFrame*8+i];
   }
   byte btn = buttonState();
   if(btn & BUTTON_1) {

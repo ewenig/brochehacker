@@ -1,4 +1,4 @@
-#include "broche_eeprom.h"
+#include "brochehacker.h"
 #include <EEPROM.h>
 
 // todo:
@@ -8,10 +8,12 @@
 
 void saveEEPROM() {
   // save AnimationStorage into eeprom
-  EEPROM.put(0, store);
+  extern AnimationStorage *store;
+  EEPROM.put(0, *store);
 }
 
 void loadEEPROM() {
   // loads eeprom contents into AnimationStorage. likely only called during boot
-  EEPROM.get(0, store);
+  extern AnimationStorage *store;
+  EEPROM.get(0, *store);
 }

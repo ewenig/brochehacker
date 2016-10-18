@@ -8,8 +8,6 @@
  */
 
 #include "Arduino.h"
-#include "broche_display.h"
-#include "broche_eeprom.h"
 
 // "Tilt" font by Tony de Marco
 const unsigned char charset[] PROGMEM = {

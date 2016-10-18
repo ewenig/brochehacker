@@ -7,9 +7,6 @@
  * glider animation
  */
 
-#include "broche_display.h"
-#include "broche_eeprom.h"
-
 void runGlider();
 
 #endif // GLIDER_H_
